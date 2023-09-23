@@ -41,5 +41,9 @@ public static string Check(string[] input)
 
 ```
 
-
+Utilizzando un costrutto iterativo foreach, si controllano singolarmente i caratteri all'interno della stringa del numero di telefono e, utilizzando i valori della tabella ascii, si controlla che i caratteri siano diversi da:
+*dei numeri;
+ *un "+".
+Se la condizione risulta verificata correttamente, flag diventa true e quindi si esce dal ciclo scartando la stringa.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
