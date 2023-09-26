@@ -42,8 +42,26 @@ public static string Check(string[] input)
 ```
 
 Utilizzando un costrutto iterativo foreach, si controllano singolarmente i caratteri all'interno della stringa del numero di telefono e, utilizzando i valori della tabella ascii, si controlla che i caratteri siano diversi da:
-*dei numeri;
- *un "+".
+<ul>
+<li>dei numeri;</li>
+ <li>un "+".</li>
+</ul>
 Se la condizione risulta verificata correttamente, flag diventa true e quindi si esce dal ciclo scartando la stringa.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Si procede poi controllando il prefisso della stringa: se qualora il prefisso rispetti i canoni imposti dalla consegna, si ritornerà la stringa in questione; in caso contrario, il programma ritornerà "", come da consegna.
+
+```C#
+
+if(input[i].Length == 13 && (input[i][0] == '+' && input[i][1] == '3' && input[i][2] == '9' && input[i][3] == '3')){    //controlla il prefisso '+39'
+                return input[i];
+            } 
+             else if (input[i].Length == 14 &&input[i][0] == '0' && input[i][1] == '0' && input[i][2] == '3' && input[i][3] == '9' && input[i][4] == '3'){  //controlla il prefisso '0039'
+                return input[i];
+            }
+            else if (input[i].Length == 10 && input[i][0] == '3'){   //controlla il prefisso '3'
+                return input[i];
+            }
+
+```
